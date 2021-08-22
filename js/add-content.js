@@ -34,7 +34,7 @@ $(function() {
       for ( var i = 0; i < words.length; i++ ) {
         dict[ words[i] ] = true;
       }
-      console.log("word.legnth = " + words.length);
+      console.log("Dictionary size = " + words.length + " words");
     });
      
      //Ajax to get json containing info about tiles and their distribution
@@ -58,7 +58,7 @@ $(function() {
 
      //This function calls the core functions to start the game initially after JSON is read
      function initializeGame(){
-       console.log("Initializing game v1.3");
+       console.log("Initializing game v1.31...");
        fillTilePool();
        initializeRackTiles();
        addTilesToRack(true);
@@ -257,7 +257,7 @@ $(function() {
 
      //This function is used to update the current word as the user plays
      function updateWord(){
-       var currentWord = " ";
+       var currentWord = "";
        //update the current word by parsing board tiles
        $("#tileBoard div").each(function(index,$el) {
          if($el.getAttribute("letter") != -1) {

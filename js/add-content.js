@@ -24,7 +24,7 @@ $(function() {
     //$.get( "https://www.math.sjsu.edu/~foster/dictionary.txt", function( txt ) {
     //  $.get( href="file:///C:/Users/Alex/Documents/UML/GUI%20I/Scrabble-master/dictionary/dictionary.txt", function( txt ) {
     //$.get( "https://github.com/dwyl/english-words/blob/master/words_alpha.txt", function( txt ) {
-    $.get( "/dictionary/dictionary.txt", function( txt ) {
+    $.get( "dictionary/dictionary.txt", function( txt ) {
       // Get an array of all the words
       var words = txt.split( "\n" );
 
@@ -369,7 +369,6 @@ $(function() {
              resizable: false
       });
      }
-
 
      //Fill hand back up to 7 tiles on next word
      $( "#next-word" ).click(function() {

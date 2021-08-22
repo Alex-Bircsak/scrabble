@@ -92,6 +92,7 @@ $(function() {
      //this function is used to keep track of the total score throughout the game
     function calculateScore() {
       console.log("Calculating score...");
+      console.log("Dictionary size = " + words.length + " words");
       if(doubleWordFlag) { //reset the double word flag for next blank board
         doubleWordFlag = false;
       }
@@ -127,6 +128,7 @@ $(function() {
         I suggest trying a different word. Or try resetting your tiles and trying again.</div>");
         //return -1;
       }
+
       word = "";
     }
 

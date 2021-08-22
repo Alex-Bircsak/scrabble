@@ -15,7 +15,7 @@ $(function() {
     var currentScore = 0;
     var totalScore = 0;
     var dict = {};
-    var word = " ";
+    var word = "";
      
     // Do a jQuery Ajax request for the text dictionary
     // Note, used this page to make the dictionary all lowercase:
@@ -58,6 +58,7 @@ $(function() {
 
      //This function calls the core functions to start the game initially after JSON is read
      function initializeGame(){
+       console.log("Initializing game v1.3");
        fillTilePool();
        initializeRackTiles();
        addTilesToRack(true);
@@ -101,9 +102,9 @@ $(function() {
       //     currentWord += $el.getAttribute("letter");
       //   }
       // });
-      console.log("Word: " + word +" : " + dict[ word ]);
-      var word = $(word).html();
-      console.log("Word: " + word +" : " + dict[ word ]);
+      console.log("Word: '" + word + "' : " + dict[ word ]);
+      word = $("#word").html();
+      console.log("Word: '" + word + "' : " + dict[ word ]);
 
       if ( dict[ word ] ) {
         console.log("Valid word.");
@@ -126,7 +127,8 @@ $(function() {
         I suggest trying a different word. Or try resetting your tiles and trying again.</div>");
         //return -1;
       }
-     }
+      word = "";
+    }
 
      //Function to revert tiles back to rack if dropped in an invalid area
      //Got this from: https://stackoverflow.com/questions/5735270/revert-a-jquery-draggable-object-back-to-its-original-container-on-out-event-of

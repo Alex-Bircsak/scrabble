@@ -58,7 +58,7 @@ $(function() {
 
      //This function calls the core functions to start the game initially after JSON is read
      function initializeGame(){
-       console.log("Initializing game v1.31...");
+       console.log("Initializing game v1.32...");
        fillTilePool();
        initializeRackTiles();
        addTilesToRack(true);
@@ -103,8 +103,8 @@ $(function() {
       //   }
       // });
       console.log("Word: '" + word + "' : " + dict[ word ]);
-      word = $("#word").html();
-      console.log("Word: '" + word + "' : " + dict[ word ]);
+      //word = $("#word").html();
+      //console.log("Word: '" + word + "' : " + dict[ word ]);
 
       if ( dict[ word ] ) {
         console.log("Valid word.");

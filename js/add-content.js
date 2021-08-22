@@ -4,18 +4,18 @@
  Updated on 8/21/21
 */
 
- $(function() {
-     var tilePool = [];
-     var currentRack = [];
-     var tilesOnBoard = [];
-     var remainingTiles;
-     var missingHandTiles;
-     var currentTileID = 0
-     var doubleWordFlag = false;
-     var currentScore = 0;
-     var totalScore = 0;
-     var dict = {};
-     var word = " ";
+$(function() {
+    var tilePool = [];
+    var currentRack = [];
+    var tilesOnBoard = [];
+    var remainingTiles;
+    var missingHandTiles;
+    var currentTileID = 0
+    var doubleWordFlag = false;
+    var currentScore = 0;
+    var totalScore = 0;
+    var dict = {};
+    var word = " ";
      
     // Do a jQuery Ajax request for the text dictionary
     // Note, used this page to make the dictionary all lowercase:
@@ -87,8 +87,8 @@
      }
 
      //this function is used to keep track of the total score throughout the game
-     function calculateScore() {
-       console.log("Calculating score...");
+    function calculateScore() {
+      console.log("Calculating score...");
       if(doubleWordFlag) { //reset the double word flag for next blank board
         doubleWordFlag = false;
       }
@@ -99,7 +99,8 @@
       //     currentWord += $el.getAttribute("letter");
       //   }
       // });
-      console.log("Word: " + word);
+      console.log("Word: " + word +" : " + dict[ word ]);
+
       if ( dict[ word ] ) {
         console.log("Valid word.");
         // If it is, AWESOME! The user is so smart.

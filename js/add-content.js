@@ -26,6 +26,7 @@ $(function() {
     //$.get( "https://github.com/dwyl/english-words/blob/master/words_alpha.txt", function( txt ) {
     $.get( "dictionary/dictionary.txt", function( txt ) {
       // Get an array of all the words
+      console.log("Initializing dictionary...");
       var words = txt.split( "\n" );
 
       // And add them as properties to the dictionary lookup
@@ -33,6 +34,7 @@ $(function() {
       for ( var i = 0; i < words.length; i++ ) {
         dict[ words[i] ] = true;
       }
+      console.log("word.legnth = " + words.length);
     });
      
      //Ajax to get json containing info about tiles and their distribution
@@ -99,6 +101,8 @@ $(function() {
       //     currentWord += $el.getAttribute("letter");
       //   }
       // });
+      console.log("Word: " + word +" : " + dict[ word ]);
+      var word = $(word).html();
       console.log("Word: " + word +" : " + dict[ word ]);
 
       if ( dict[ word ] ) {

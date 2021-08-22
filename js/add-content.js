@@ -35,7 +35,8 @@ $(function() {
         dict[ words[i] ] = true;
       }
       console.log("Dictionary size = " + words.length + " / " + dict.length + " words");
-      console.log("Word test: " + dict[1] + ", " + dict[ and] );
+      console.log("Word test 1: " + dict[1]);
+      console.log("Word test 2: " + dict[ "and" ] );
     });
      
   // Ajax to get json containing info about tiles and their distribution

@@ -35,6 +35,7 @@ $(function() {
         dict[ words[i] ] = true;
       }
       console.log("Dictionary size = " + words.length + " / " + dict.length + " words");
+      console.log("Word test: " + dict[1] + ", " + dict[ and] );
     });
      
   // Ajax to get json containing info about tiles and their distribution
@@ -58,7 +59,7 @@ $(function() {
 
   // Call the core functions to start the game initially after JSON is read
     function initializeGame(){
-      console.log("Initializing game v1.33...");
+      console.log("Initializing game v1.34...");
       fillTilePool();
       initializeRackTiles();
       addTilesToRack(true);
